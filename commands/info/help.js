@@ -21,7 +21,7 @@ module.exports = class extends Command {
     const embed = new MessageEmbed()
     .setColor('GREEN')
     .setTitle(`${config.bot_name || 'Bot'}'s Command List`)
-    .setDescription(`**Please make sure to follow and star the github repo [here](https://github.com/peterhanania/reaction-roles)**`)
+    .setDescription(`**Please make sure to follow and star the github repo [here](https://github.com/MashedTuna/Reaction-Role)**`)
 
 
     const categories = message.client.utils.removeDuplicates(message.client.commands.filter(cmd => cmd.category !== 'Owner').map(cmd => cmd.category));
