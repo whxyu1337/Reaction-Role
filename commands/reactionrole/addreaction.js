@@ -35,7 +35,7 @@ module.exports = class extends Command {
   const missingPermEmbed = new MessageEmbed()
   .setAuthor(`Missing User Permissions`, message.author.displayAvatarURL())
   .setDescription(`${fail} The following command the **Administrator** Permission`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
    .setColor(client.color.red)
 
 
@@ -44,7 +44,7 @@ module.exports = class extends Command {
     if (!channel) return message.channel.send(new MessageEmbed()
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} Provide me with a valid Channel`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
    .setColor(client.color.red)
     );
     
@@ -52,12 +52,12 @@ module.exports = class extends Command {
     if(!ID) return message.channel.send(new MessageEmbed()
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} Provide me with a valid message ID`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
     );
     let messageID = await channel.messages.fetch(ID).catch(() => { return message.channel.send(new MessageEmbed()
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} I could not find the following ID`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
    .setColor(client.color.red)
     ); })
 
@@ -65,7 +65,7 @@ module.exports = class extends Command {
     if (!role) return message.channel.send(new MessageEmbed()
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} Provide me with a valid Role`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
    .setColor(client.color.red)
     );
 
@@ -78,14 +78,14 @@ module.exports = class extends Command {
     if (!emoji) return message.channel.send(new MessageEmbed()
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} Provide me with a valid Emoji`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
    .setColor(client.color.red)
     );
 
     if (isCustomEmoji(args[3])) return message.channel.send(new MessageEmbed()
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} Do Not use custom Emojis!`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
    .setColor(client.color.red)
     );
 
@@ -98,7 +98,7 @@ await messageID.react(emoji)
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} Please Provide a valid Emoji.`)
   .setColor(client.color.red)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`));
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`));
 }
  
     
@@ -119,7 +119,7 @@ await messageID.react(emoji)
                 .addField('Message ID', ID, true)
                 .addField('Message', `[Jump To Message](${messageID.url})`, true)
                 .addField('Role', role, true)
-                .setFooter('https://github.com/peterhanania/reaction-roles'))
+                .setFooter('https://github.com/MashedTuna/Reaction-Role'))
 
         function isCustomEmoji(emoji) {
       return emoji.split(":").length == 1 ? false : true;
