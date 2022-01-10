@@ -35,7 +35,7 @@ If you liked this repository, feel free to leave a star ⭐!
 ## Installation
 
 ```
-git clone https://github.com/peterhanania/reaction-roles.git
+git clone https://https://github.com/MashedTuna/Reaction-Role.git
 ```
 then run:
 ```
