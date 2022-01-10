@@ -58,7 +58,7 @@ let wipeEmbed3 = new MessageEmbed()
 .setColor(message.client.color.green)
 .setAuthor(message.author.tag, message.author.displayAvatarURL())
 .setDescription(`The Current Guild has no Existing Reaction Roles!`)
-.setFooter(`https://github.com/peterhanania/reaction-roles`)
+.setFooter(`https://github.com/MashedTuna/Reaction-Role`)
 
 message.channel.send(wipeEmbed3)
 
@@ -69,7 +69,7 @@ let wipeEmbed = new MessageEmbed()
 .setColor(message.client.color.green)
 .setAuthor(message.author.tag, message.author.displayAvatarURL())
 .setDescription(`Successfuly deleted **${results.length}** ${resultsHehe} from the guild.`)
-.setFooter(`https://github.com/peterhanania/reaction-roles`)
+.setFooter(`https://github.com/MashedTuna/Reaction-Role`)
 
 
 message.channel.send(wipeEmbed)
