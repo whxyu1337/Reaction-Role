@@ -35,14 +35,14 @@ module.exports = class extends Command {
   const missingPermEmbed = new MessageEmbed()
   .setAuthor(`Missing User Permissions`, message.author.displayAvatarURL())
   .setDescription(`${fail} The following command the **Administrator** Permission`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
    .setColor(client.color.red)
 
       let channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0]) || message.guild.channels.cache.find(ch => ch.name === args[0])
     if (!channel) return message.channel.send(new MessageEmbed()
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} Provide me with a valid Channel`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
    .setColor(client.color.red)
     );
     
@@ -50,12 +50,12 @@ module.exports = class extends Command {
     if(!ID) return message.channel.send(new MessageEmbed()
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} Provide me with a valid message ID`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
     );
     let messageID = await channel.messages.fetch(ID).catch(() => { return message.channel.send(new MessageEmbed()
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} I could not find the following ID`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
    .setColor(client.color.red)
     ); })
 
@@ -64,7 +64,7 @@ module.exports = class extends Command {
     if (!emoji) return message.channel.send(new MessageEmbed()
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} Provide me with a valid Emoji`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
    .setColor(client.color.red)
     );
 
@@ -73,7 +73,7 @@ module.exports = class extends Command {
     if (isCustomEmoji(args[2])) return message.channel.send(new MessageEmbed()
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} Do Not use custom Emojis!`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`)
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`)
    .setColor(client.color.red)
     );
     
@@ -85,7 +85,7 @@ module.exports = class extends Command {
    .setColor(client.color.green)
      .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${success} Deleted The [Reaction Role](${messageID.url})`)
-  .setFooter(`https://github.com/peterhanania/reaction-roles`))
+  .setFooter(`https://github.com/MashedTuna/Reaction-Role`))
   
 
 
